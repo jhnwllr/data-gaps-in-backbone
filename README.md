@@ -23,5 +23,5 @@ bash run.sh
 * table of candidate missing names `data/possibly_missing_table.tsv`
 * A few plots
 
-![](https://raw.githubusercontent.com/jhnwllr/data-gaps-in-backbone/master/plots/reasons_bucket.svg)
+![](https://raw.githubusercontent.com/jhnwllr/data-gaps-in-backbone/main/plots/reason_buckets.svg)
 
