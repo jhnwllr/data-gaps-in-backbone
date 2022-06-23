@@ -12,15 +12,10 @@ ssh-add
 # unzip data/wanted_names_unfiltered.parquet.zip -d data/wanted_names_unfiltered.parquet
 # rm -r data/wanted_names_unfiltered.parquet.zip
 
-# # download current backbone
-# wget -O data/backbone.zip https://hosted-datasets.gbif.org/datasets/backbone/current/backbone.zip
-# rm -r data/Taxon.tsv
-# unzip -p data/backbone.zip backbone/Taxon.tsv > data/Taxon.tsv
-# rm -r data/backbone.zip
-
 # Final analysis in R
 # Rscript.exe --vanilla R/filter_names.R 
-Rscript.exe --vanilla R/make_plot.R
-Rscript.exe --vanilla R/make_plot2.R
+# Rscript.exe --vanilla R/make_plot.R
+# Rscript.exe --vanilla R/make_plot2.R
 Rscript.exe --vanilla R/possibly_missing_table.R
-
+# Rscript.exe --vanilla R/extra_analysis/uncapitalized_first_letter.R
+#ls0dajsdf030303jafdsflaskdfjalkj

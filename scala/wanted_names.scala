@@ -9,8 +9,11 @@ groupBy("kingdom","phylum","class","order_","family","v_kingdom","v_phylum","v_c
 agg(
 count(lit(1)).alias("n_occ"),
 countDistinct("datasetkey").as("n_dataset"),
-countDistinct("publishingorgkey").as("n_publisher")
+countDistinct("publishingorgkey").as("n_publisher"),
+collect_set("datasetkey").as("datasetkeys_array")
 ).
+withColumn("datasetkeys",concat_ws(";", $"datasetkeys_array")).
+drop("datasetkeys_array").
 orderBy(desc("n_occ"))
 
 df.show()

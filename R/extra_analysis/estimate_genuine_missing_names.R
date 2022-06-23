@@ -1,6 +1,6 @@
 # estimate how many missing table 
 
-setwd("C:/Users/ftw712/Desktop/Beetles/")
+# setwd("C:/Users/ftw712/Desktop/Beetles/")
 
 library(dplyr)
 
