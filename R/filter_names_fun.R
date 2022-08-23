@@ -71,7 +71,8 @@ filter(!parsedpartially_parsed) %>% # none of this please
 filter(rankmarker_parsed %in% c("sp.","infrasp.")) %>% 
 filter(across(any_of("sensu_parsed"), ~is.na(.x))) %>% # none of this please
 filter(across(any_of("nomstatus_parsed"), ~is.na(.x))) %>% # none of this please
-filter(across(any_of("notho_parsed"), ~is.na(.x)))
+filter(across(any_of("notho_parsed"), ~is.na(.x))) %>%
+mutate(verbatim_index = row_number()) 
 
 return(pp)
 }
